@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h1>Rediger kategori</h1>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-4">
+                    <form name="categoryForm" ng-submit="categoryedit.submit(categoryedit.category,categoryForm)" method="post" role="form">
+                        <div class="form-group">Active
+                            <input type="checkbox" ng-model="categoryedit.category.isActive">
+                        </div>
+                        <div class="form-group">
+                            Navn:
+                            <input type="text" ng-model="categoryedit.category.name" tabindex="1" class="form-control" placeholder="navn" required>
+                        </div>
+                        <div class="form-group">
+                            Beskrivelse(internt):
+                            <textarea rows="4" ng-model="categoryedit.category.description" tabindex="2" class="form-control" placeholder="description"></textarea>
+                        </div>
+                        <button type="button" ng-click="categoryedit.cancel()" class="btn btn-danger">Cancel</button>
+                        <button type="submit" ng-disabled="categoryedit.isFormValid(categoryForm)" class="btn btn-primary">Done</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

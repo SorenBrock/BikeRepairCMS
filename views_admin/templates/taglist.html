@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <h1>Tagliste</h1>
+        <table class="table table-bordered table-striped" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tag in taglist.tag">
+                    <td>{{tag.name + (tag.isActive && ' (active)' || '')}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-success" ng-click="taglist.editTag(tag._id)">Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" confirm-Click="Slet tag?" ng-click="taglist.deleteTag(tag._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" ng-click="taglist.createTag()">Opret tag</button>
+    </div>
+</div>

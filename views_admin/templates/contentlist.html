@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <h1>Artikelliste</h1>
+        <table class="table table-bordered table-striped" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="content in contentlist.content">
+                    <td>{{content.name + (content.isActive && ' (active)' || '')}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-success" ng-click="contentlist.editContent(content._id)">Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" confirm-Click="Slet artikel?" ng-click="contentlist.deleteContent(content._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" ng-click="contentlist.createContent()">Opret artikel</button>
+    </div>
+</div>

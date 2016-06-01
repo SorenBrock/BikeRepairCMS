@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <h1>Kategoriliste</h1>
+        <table class="table table-bordered table-striped" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Kategorinavn</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="category in categorylist.category">
+                    <td>{{category.name + (category.isActive && ' (active)' || '')}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-success" ng-click="categorylist.editCategory(category._id)">Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" confirm-Click="Slet kategori?" ng-click="categorylist.deleteCategory(category._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" ng-click="categorylist.createCategory()">Opret kategori</button>
+    </div>
+</div>

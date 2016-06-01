@@ -1,0 +1,44 @@
+<div class="container">
+    <form name="contentForm" ng-submit="contentedit.submit(contentedit.content,contentForm)" method="post" role="form">
+        <div class="row">
+            <h1>Rediger artikel</h1>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="form-group">Active
+                            <input type="checkbox" ng-model="contentedit.content.isActive">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" size="1" ng-model="contentedit.content.category._id" required>
+                                <option value="" disabled selected>Vælg kategori</option>
+                                <option ng:repeat="category in contentedit.categories" value="{{category._id}}">
+                                    {{category.name}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            Titel:
+                            <input type="text" ng-model="contentedit.content.name" tabindex="1" class="form-control" placeholder="Titel" required>
+                        </div>
+                        <div class="form-group">
+                            Tekst:
+                            <textarea rows="10" ng-model="contentedit.content.text" tabindex="2" class="form-control" placeholder="Tekst" required></textarea>
+
+                        </div>
+                        <button type="button" ng-click="contentedit.cancel()" class="btn btn-danger">Cancel</button>
+                        <button type="submit" ng-disabled="contentedit.isFormValid(contentForm)" class="btn btn-primary">Done</button>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2">
+                        <h4>Tags</h4>
+                        <div class="form-group">   
+                            <div  ng-repeat="tag in contentedit.tags" >
+                                <input type="checkbox" checklist-model="contentedit.content.tags" checklist-value="tag"/> {{tag.name}}
+                               </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

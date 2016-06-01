@@ -1,0 +1,47 @@
+{% extends 'layout.html' %} {% block title %}bike repair | artikler{% endblock %} {% block head %} {% parent %} {% endblock %} {% block content %}
+<div class="container customContainer">
+    <h1 class="text-center">Artiker</h1>
+    <div class="row">
+        <form id="search-form" action="/articles" method="post" role="form">
+            <div class="col-lg-6 searchForm nopadding col-md-offset-3">
+                <div class="input-group custom-search-form">
+                    <input type="text" name="searchfield" class="form-control" placeholder="Søg...">
+                    <span class="input-group-btn">
+              <button class="btn blue-btn" type="button" title="Søg">
+              <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            {% for tag in tags %} {% if loop.first %}
+            <div class="tags text-center">{% endif %}<a class="tag" href="/articles/{{ tag.id }}" title="{{ tag.name }}">{{ tag.name }}</a> {% if loop.last %} </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 categories">
+            {% for category in categories %}
+            <li class="category"><a href="/articles/{{ category.id }}" title="Kategori: {{ category.name }}">{{ category.name }}</a></li>
+
+            {% endfor %}
+        </div>
+        <div class="col-md-8 article">
+            {% for article in articles %}
+            <h2 clas="nopadding">{{ article.name }}</h2>
+            <div class="col-md-12 nopadding">
+                <h4>KATEGORI:</h4> <h4 style="font-weight: bold; text-transform: none;">{{ article.category.name }}</h4></div>
+            <div class="col-md-12 nopadding articleTags">
+                <h5>Tags:</h5> {% for tag in article.tags %} {% if loop.first %}{% endif %} <a class="inlineTags" href="/articles/{{ tag.id }}">{{ tag.name }}</a><span class="spacer"></span> {% if loop.last %} {% endif %} {% endfor %}</div>
+            <p class="articleText">{{ article.text }}</p>
+            <hr> {% endfor %}
+            <br />
+        </div>
+    </div>
+</div>
+
+{% endblock %}

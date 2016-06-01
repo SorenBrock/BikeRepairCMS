@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <h1>Edit bruger</h1>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-4">
+                    <form name="userForm" ng-submit="useredit.submit(useredit.user,userForm)" method="post" role="form">
+                        <div class="form-group">Admin
+                            <input ng-disabled="useredit.user.isMaster" type="checkbox" ng-model="useredit.user.isAdmin" aria-label="Slave input">
+                        </div>
+                        <div class="form-group">
+                            Fornavn:
+                            <input ng-disabled="useredit.user.isMaster" type="text" ng-model="useredit.user.firstname" tabindex="1" class="form-control" placeholder="Fornavn" required>
+                        </div>
+                        <div class="form-group">
+                            Efternavn:
+                            <input ng-disabled="useredit.user.isMaster" type="text" ng-model="useredit.user.lastname" tabindex="2" class="form-control" placeholder="Efternavn" required>
+                        </div>
+                        <div class="form-group">
+                            Email:
+                            <input type="email" ng-model="useredit.user.email" tabindex="3" class="form-control" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            Username:
+                            <input type="text" ng-model="useredit.user.username" tabindex="4" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            Password:
+                            <input type="text" ng-model="useredit.user.password" tabindex="5" class="form-control" placeholder="Password" required>
+                        </div>
+
+                        <button type="button" ng-click="useredit.cancel()" class="btn btn-danger">Cancel</button>
+                        <button type="submit" ng-disabled="useredit.isFormValid(userForm)" class="btn btn-primary">Done</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

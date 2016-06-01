@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <!-- Base is set -> therefor /admin/ isn't included in the app-routing template url-->
+    <base href="/admin/" />
+    <meta charset="utf-8">
+    <meta name="author" content="Admin create user">
+    <meta name="description" content="Bike Repair">
+
+    <title>Bike Repair - Admin</title>
+    <link href='/libs/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel="stylesheet">
+    <link href='/stylesheets/backend.css' type='text/css' rel="stylesheet">
+</head>
+
+<body ng-cloak>
+
+    <nav class="navbar navbar-default bg-primary">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/admin">ADMIN</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/admin">Home</a></li>
+                <li><a href="userlist">Brugere</a></li>
+                <li><a href="categorylist">Kategorier</a></li>
+                <li><a href="taglist">Tags</a></li>
+                <li><a href="contentlist">Artikler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="main">
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+
+    </div>
+    <!-- Libraries -->
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--    <script src="libs/toastr/toastr.min.js"></script>   -->
+    <!-- Angular -->
+    <script src="/libs/angular/angular.min.js"></script>
+    <script src="/libs/angular-route/angular-route.min.js"></script>
+    <script src="/libs/checklist-model/checklist-model.js"></script>
+    <!-- Application code -->
+    <script src="/app/app.js"></script>
+    <script src="/app/services/authentication.service.js"></script>
+    <script src="/app/services/data.service.js"></script>
+    <script src="/app/controllers/home.controller.js"></script>
+    <script src="/app/controllers/login.controller.js"></script>
+    <script src="/app/controllers/userlist.controller.js"></script>
+    <script src="/app/controllers/useredit.controller.js"></script>
+    <script src="/app/controllers/usercreate.controller.js"></script>
+    <script src="/app/controllers/categorylist.controller.js"></script>
+    <script src="/app/controllers/categorycreate.controller.js"></script>
+    <script src="/app/controllers/categoryedit.controller.js"></script>
+    <script src="/app/controllers/taglist.controller.js"></script>
+    <script src="/app/controllers/tagcreate.controller.js"></script>
+    <script src="/app/controllers/tagedit.controller.js"></script>
+    <script src="/app/controllers/contentlist.controller.js"></script>
+    <script src="/app/controllers/contentcreate.controller.js"></script>
+    <script src="/app/controllers/contentedit.controller.js"></script>
+    <!-- Scripts -->
+    <script src="/javascripts/script.js"></script>
+
+
+</body>
+
+</html>

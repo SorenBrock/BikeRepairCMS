@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/AngularSites/BikeRepairCMS/public/libs/jquery/src/var/hasOwn.js"
+    ]
+}

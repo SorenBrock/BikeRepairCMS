@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <h1>Brugerliste</h1>
+        <table class="table table-bordered table-striped" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>E-mail</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in userlist.users">
+                    <td>{{user.username + (user.isAdmin && ' (admin)' || '') + (user.isMaster && ' (master)' || '')}}</td>
+                    <td>{{user.email}} 
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success" ng-click="userlist.editUser(user._id)">Edit</button>
+                    </td>
+                    <td>
+                        <button ng-show="!user.isMaster" type="button" class="btn btn-danger"  confirm-Click="Slet bruger?" ng-click="userlist.deleteUser(user._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" ng-click="userlist.createUser()">Opret bruger</button>
+    </div>
+</div>

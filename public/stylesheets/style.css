@@ -1,0 +1,331 @@
+/*angular settings*/
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+input.ng-invalid.ng-dirty {
+    background-color: lightgrey;
+}
+
+
+/*angular settings*/
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    height: 100%;
+    background: /* top, transparent red, faked with gradient */
+    linear-gradient( rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), /* bottom, image */
+    url(../images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0px;
+    color: #a2a2a2;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    display: inline-block;
+}
+
+h6 {
+    font-size: 15px;
+    color: #4d4d4d;
+    margin: 0px;
+}
+
+.customContainer {
+    margin-top: 50px;
+    background: white;
+    min-height: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.navbar-default {
+    border-bottom: 1px solid;
+    border-color: #a2a2a2;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.logo {
+    color: rgba(52, 152, 219, 1.0)!important;
+    font-size: 22px;
+    text-transform: lowercase;
+}
+
+.searchForm {
+    margin-top: 8px;
+}
+
+.tags {
+    padding: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 13px;
+    margin-top: 10px!important;
+    background: rgba(52, 152, 219, 1.0);
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    -webkit-transition: padding 0.2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: padding 0.2s;
+}
+
+.tag:hover {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 18px;
+}
+
+.articleTags:last-child {}
+
+.spacer::before {
+    content: ",";
+}
+
+.spacer:last-child:before {
+    content: "";
+}
+
+.blue-btn {
+    background: rgba(52, 152, 219, 1.0);
+    color: #fff;
+}
+
+.blue-btn:hover {
+    color: #fff;
+    background: rgba(52, 152, 219, 0.8);
+}
+
+.categories {
+    margin-top: 25px;
+}
+
+.category {
+    list-style-type: none;
+    text-align: right;
+}
+
+.category > a {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-bottom: 8px;
+    background: rgba(52, 152, 219, 1);
+    font-size: 16px;
+    color: white;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.welcomeContainer {
+    background: linear-gradient( rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), url(../images/bg.jpeg);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcomeLogo {
+    margin-top: 50px;
+    display: flex;
+    align-self: center;
+    max-width: 30%;
+    height: auto;
+}
+
+.welcomeCta {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background: white;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+    color: rgba(52, 152, 219, 1.0);
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid white;
+    -webkit-transition: width 0.5s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+}
+
+.welcomeCta:hover {
+    text-decoration: none;
+    color: rgba(52, 152, 219, 1.0);
+    width: 23%;
+}
+
+.profileHeadline {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.panel-login {
+    border-color: #ccc;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.panel-login>.panel-heading {
+    color: #00415d;
+    background-color: #fff;
+    border-color: #fff;
+    text-align: center;
+}
+
+.panel-login>.panel-heading a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    font-size: 15px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.panel-login>.panel-heading a.active {
+    color: rgba(52, 152, 219, 1.0);
+    font-size: 18px;
+}
+
+.panel-login>.panel-heading hr {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    clear: both;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+
+.panel-login input[type="text"],
+.panel-login input[type="email"],
+.panel-login input[type="password"] {
+    height: 45px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.panel-login input:hover,
+.panel-login input:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-color: #ccc;
+}
+
+.btn-login {
+    background-color: rgba(52, 152, 219, 1.0);
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: rgba(52, 152, 219, 1.0);
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    color: #fff;
+    background-color: #53A3CD;
+    border-color: #53A3CD;
+}
+
+.forgot-password {
+    text-decoration: underline;
+    color: #888;
+}
+
+.forgot-password:hover,
+.forgot-password:focus {
+    text-decoration: underline;
+    color: #666;
+}
+
+.btn-register {
+    background-color: rgba(52, 152, 219, 1.0);
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: rgba(52, 152, 219, 1.0);
+}
+
+.btn-register:hover,
+.btn-register:focus {
+    color: #fff;
+    background-color: #53A3CD;
+    border-color: #53A3CD;
+}
+
+.loginAlert {
+    color: white;
+    margin: 15px 0px;
+}
+
+.error {
+    font-weight: 400;
+    color: red;
+}

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block title %}bike repair | profile{% endblock %} {% block head %} {% parent %} {% endblock %} {% block content %}
+<div class="container customContainer">
+    <h1 class="text-center">Profil</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <h5 class="profileHeadline">Brugernavn</h5>
+            <h6>{{user.username}}</h6>
+            <h5 class="profileHeadline">Fornavn</h5>
+            <h6>{{user.firstname}}</h6>
+            <h5 class="profileHeadline">Efternavn</h5>
+            <h6>{{user.lastname}}</h6>
+            <h5 class="profileHeadline">E-mail</h5>
+            <h6>{{user.email}}</h6>
+            <h5 class="profileHeadline">Oprettet</h5>
+            <h6>{{user.createdOn|date('d/m-Y')}}</h6>
+            <div class="col-md-4 col-md-offset-4" style="margin-top: 30px;">
+                <a id="login-submit" class="form-control btn btn-login" href="\auth/signout">Log out</a>
+            </div>
+         </div>
+    </div>
+</div>
+
+{% endblock %}
